@@ -5,21 +5,21 @@
 class Jac < Formula
   desc "CLI tool for managing people and groups as Infrastructure as Code"
   homepage "https://github.com/nestoca/jac"
-  version "0.0.14"
+  version "0.0.15"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.14/jac_0.0.14_darwin_amd64.tar.gz"
-      sha256 "2f17d98632be5efd23285bb8a22e4c47375f64f27c0c2112e64be3d1eac7b86a"
+    if Hardware::CPU.arm?
+      url "https://github.com/nestoca/jac/releases/download/v0.0.15/jac_0.0.15_darwin_arm64.tar.gz"
+      sha256 "dead6eb4c658a872520738de2a4daf369c9fcd0c72e11468d136e42d973fd148"
 
       def install
         bin.install "jac"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.14/jac_0.0.14_darwin_arm64.tar.gz"
-      sha256 "5842a824777bc08ae589d3c7122074837db5fd7c932696cf7ded236a7c7fc390"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/jac/releases/download/v0.0.15/jac_0.0.15_darwin_amd64.tar.gz"
+      sha256 "c4bd3ccb2ec413a2273f5a95f4ff6cdbba635801c21e18fa1be6a05fbe7df483"
 
       def install
         bin.install "jac"
@@ -29,16 +29,16 @@ class Jac < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.14/jac_0.0.14_linux_arm64.tar.gz"
-      sha256 "42bce134d54aabd4d1a5b2dad4e037f4a4cd927334fb9d1c69c32df50d74dae3"
+      url "https://github.com/nestoca/jac/releases/download/v0.0.15/jac_0.0.15_linux_arm64.tar.gz"
+      sha256 "e7892ebb021cdd34b6e37a92d8719016a887329db72dec0be0a050bc11bc256e"
 
       def install
         bin.install "jac"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.14/jac_0.0.14_linux_amd64.tar.gz"
-      sha256 "bbc05774d633db045ea285f4479d655ceee8713830b00b70d498f658baba3390"
+      url "https://github.com/nestoca/jac/releases/download/v0.0.15/jac_0.0.15_linux_amd64.tar.gz"
+      sha256 "d77db34058ce77d832427eae6528cebc07a863557a766397dd997cee19faf8d4"
 
       def install
         bin.install "jac"
