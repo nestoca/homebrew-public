@@ -5,21 +5,21 @@
 class Jac < Formula
   desc "CLI tool for managing people and groups as Infrastructure as Code"
   homepage "https://github.com/nestoca/jac"
-  version "0.0.20"
+  version "0.0.21"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.20/jac_0.0.20_darwin_amd64.tar.gz"
-      sha256 "ea15bb550e8941428fe7eabb9393cf0dafdf5724ff90dabbac9d73265c668564"
+      url "https://github.com/nestoca/jac/releases/download/v0.0.21/jac_0.0.21_darwin_amd64.tar.gz"
+      sha256 "9745ab9118423a04cd9ebe57cc6f15aca66d980c6bff36951c763c05c0a1c760"
 
       def install
         bin.install "jac"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.20/jac_0.0.20_darwin_arm64.tar.gz"
-      sha256 "a9ea32c235cc63f551d17f477a274df8c8562bdf1bdb3efe154e6f8674a2632d"
+      url "https://github.com/nestoca/jac/releases/download/v0.0.21/jac_0.0.21_darwin_arm64.tar.gz"
+      sha256 "7c8f5eb60f081a26404c136ff72ec69e2074050750cd04b7f0028d7c77e1ebb2"
 
       def install
         bin.install "jac"
@@ -28,17 +28,17 @@ class Jac < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.20/jac_0.0.20_linux_arm64.tar.gz"
-      sha256 "1433cef60d83a8bd664c77db4abcf32f6201404aa0105eb253f41c283a437428"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/jac/releases/download/v0.0.21/jac_0.0.21_linux_amd64.tar.gz"
+      sha256 "4a7c3a9a037c8d401ad57bfb706111d066e9bee33524d6e8c0d3fadc264995de"
 
       def install
         bin.install "jac"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/jac/releases/download/v0.0.20/jac_0.0.20_linux_amd64.tar.gz"
-      sha256 "8addf0e70d2ccd6ce2dc23a0fafb58539eda886df1d9c33245238a923159f6c1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nestoca/jac/releases/download/v0.0.21/jac_0.0.21_linux_arm64.tar.gz"
+      sha256 "ea13b6df78b79982604ece4792511a7d0c685c72181e5b75fb5efa650da3a760"
 
       def install
         bin.install "jac"
