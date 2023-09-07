@@ -11,7 +11,7 @@ class Joy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_darwin_amd64.tar.gz"
-      sha256 "555ccf1258d2e5c5892fd47bda131fd5d415d8aeb62f88da92886a490a72e451"
+      sha256 "b80b83c5ec39e850bef5905aa2ff885df0ff60eceecd23c76a6e861ca03abaf1"
 
       def install
         bin.install "joy"
@@ -19,7 +19,7 @@ class Joy < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_darwin_arm64.tar.gz"
-      sha256 "e1b85216129322860ead9605ee0803725070f08f34f96eb034170f1bfd64fd15"
+      sha256 "50ddeae6c386c267437608ba1640cc0b76a26959e52984c788fc912025dd25d1"
 
       def install
         bin.install "joy"
@@ -30,7 +30,7 @@ class Joy < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_linux_arm64.tar.gz"
-      sha256 "2506e0478360c0a74bedcc0e182d3be7ebe5268cb1c3ed9e6e3c90e96a967103"
+      sha256 "820f3f166e8b5a02072f3be5f3be4f3866b05a0a8a36ab081bcb2aec3e2210f6"
 
       def install
         bin.install "joy"
@@ -38,7 +38,7 @@ class Joy < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_linux_amd64.tar.gz"
-      sha256 "38861433396030e0175c437bc346dde6ab15f42f7a17ace8ef9a26e73dcde9dc"
+      sha256 "09bc468a22d08bf90ac70219887be78b837b601b6368604f374ef898143ef092"
 
       def install
         bin.install "joy"
