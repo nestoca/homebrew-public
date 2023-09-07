@@ -5,21 +5,21 @@
 class Joy < Formula
   desc "A CLI for happily managing and deploying applications"
   homepage "https://github.com/nestoca/joy"
-  version "0.8.1"
+  version "0.8.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_darwin_amd64.tar.gz"
-      sha256 "b80b83c5ec39e850bef5905aa2ff885df0ff60eceecd23c76a6e861ca03abaf1"
+    if Hardware::CPU.arm?
+      url "https://github.com/nestoca/joy/releases/download/v0.8.2/joy_0.8.2_darwin_arm64.tar.gz"
+      sha256 "75c20a7a12794d2bacce05a9cce7d5fc38de50dd70dd2d0d0059b1cf8085a880"
 
       def install
         bin.install "joy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_darwin_arm64.tar.gz"
-      sha256 "50ddeae6c386c267437608ba1640cc0b76a26959e52984c788fc912025dd25d1"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/joy/releases/download/v0.8.2/joy_0.8.2_darwin_amd64.tar.gz"
+      sha256 "20f9a09a3a11faf84b83fca1d9c6d2592a39806b4804466f8e45d4b73703cf3a"
 
       def install
         bin.install "joy"
@@ -28,17 +28,17 @@ class Joy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_linux_arm64.tar.gz"
-      sha256 "820f3f166e8b5a02072f3be5f3be4f3866b05a0a8a36ab081bcb2aec3e2210f6"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/joy/releases/download/v0.8.2/joy_0.8.2_linux_amd64.tar.gz"
+      sha256 "d41194f6705174bd0c753c910c62adea1959be0415f4bb581972e1f4f69384c7"
 
       def install
         bin.install "joy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.8.1/joy_0.8.1_linux_amd64.tar.gz"
-      sha256 "09bc468a22d08bf90ac70219887be78b837b601b6368604f374ef898143ef092"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nestoca/joy/releases/download/v0.8.2/joy_0.8.2_linux_arm64.tar.gz"
+      sha256 "4fa271648b6e03d8a15888280f002fe76bac34b1b3e3fa90d32946d99945d304"
 
       def install
         bin.install "joy"
