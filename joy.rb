@@ -5,21 +5,21 @@
 class Joy < Formula
   desc "A CLI for happily managing and deploying applications"
   homepage "https://github.com/nestoca/joy"
-  version "0.15.1"
+  version "0.16.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nestoca/joy/releases/download/v0.15.1/joy_0.15.1_darwin_arm64.tar.gz"
-      sha256 "dd4b8fb5e473ee3d518272bddfbd902b103fc78bfdbbbbea3aaff1c5732c2f28"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/joy/releases/download/v0.16.0/joy_0.16.0_darwin_amd64.tar.gz"
+      sha256 "f0652fa8de87365a9908a3acf1970b9e6383e9a4df90e2c58fb702086cbe6eea"
 
       def install
         bin.install "joy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.15.1/joy_0.15.1_darwin_amd64.tar.gz"
-      sha256 "ce12e2025cf49cf5c78aa997a83c4d86ae67f0293c6fda89aa0333472d2bf6e5"
+    if Hardware::CPU.arm?
+      url "https://github.com/nestoca/joy/releases/download/v0.16.0/joy_0.16.0_darwin_arm64.tar.gz"
+      sha256 "38e5e1e8b379b8a15cdc4d7293f6b4026a05353fa22d001b692b5ffd28391400"
 
       def install
         bin.install "joy"
@@ -28,17 +28,17 @@ class Joy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.15.1/joy_0.15.1_linux_amd64.tar.gz"
-      sha256 "dec33977035b53a021d49afae28b45eff4875fce3ad872c1bd5a1b2e859c3cf0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nestoca/joy/releases/download/v0.16.0/joy_0.16.0_linux_arm64.tar.gz"
+      sha256 "d1da4e6cc89a714d13d4a04c916ac5c5f21b648677e74958f032aaf0b70ff58f"
 
       def install
         bin.install "joy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/joy/releases/download/v0.15.1/joy_0.15.1_linux_arm64.tar.gz"
-      sha256 "8619a7dbf19e539e031b2929e75f333b38ebb41709a9682b7aa3a3efb1af5f3e"
+    if Hardware::CPU.intel?
+      url "https://github.com/nestoca/joy/releases/download/v0.16.0/joy_0.16.0_linux_amd64.tar.gz"
+      sha256 "379923c70af37786263540fd9ecc8f2a327475f0c4219589f567ea6d4638a879"
 
       def install
         bin.install "joy"
