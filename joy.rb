@@ -5,21 +5,21 @@
 class Joy < Formula
   desc "A CLI for happily managing and deploying applications"
   homepage "https://github.com/nestoca/joy"
-  version "0.27.3"
+  version "0.28.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.27.3/joy_0.27.3_darwin_amd64.tar.gz"
-      sha256 "7be44372a0d625fe278f1608fcad27f3b860dd6bdb9d72a49220e11c63c95704"
+      url "https://github.com/nestoca/joy/releases/download/v0.28.0/joy_0.28.0_darwin_amd64.tar.gz"
+      sha256 "47783fbc55b830f9c5e781141b845a49a5e6987df5bce9697128877851aabacd"
 
       def install
         bin.install "joy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nestoca/joy/releases/download/v0.27.3/joy_0.27.3_darwin_arm64.tar.gz"
-      sha256 "2a71033b67926ee34af3bc970ea62e032455888e5fb5ebc8ebb77f8d4f2333dc"
+      url "https://github.com/nestoca/joy/releases/download/v0.28.0/joy_0.28.0_darwin_arm64.tar.gz"
+      sha256 "8d39209b516929291e24aaa99c8d9f4a1f1bfd0dbb067bde34e0f9712044e470"
 
       def install
         bin.install "joy"
@@ -29,16 +29,16 @@ class Joy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/joy/releases/download/v0.27.3/joy_0.27.3_linux_arm64.tar.gz"
-      sha256 "bb05d9799a602791c993b3612e1b75c11eff7078e4f503e27f1b1b3908a3df20"
+      url "https://github.com/nestoca/joy/releases/download/v0.28.0/joy_0.28.0_linux_arm64.tar.gz"
+      sha256 "8597f8215c2a95a782ca830f32b94b0e6795ad62419227bd4fd6da770f34473c"
 
       def install
         bin.install "joy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.27.3/joy_0.27.3_linux_amd64.tar.gz"
-      sha256 "25d5a688375229ea128846a52a0dda144fddd82661e678aee59e8c9740965006"
+      url "https://github.com/nestoca/joy/releases/download/v0.28.0/joy_0.28.0_linux_amd64.tar.gz"
+      sha256 "12e530fe6f618b8575a87aae5d3c486facb4ba5f49da0fed2c084055f61058d0"
 
       def install
         bin.install "joy"
