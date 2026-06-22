@@ -5,21 +5,21 @@
 class Joy < Formula
   desc "A CLI for happily managing and deploying applications"
   homepage "https://github.com/nestoca/joy"
-  version "0.89.1"
+  version "0.89.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nestoca/joy/releases/download/v0.89.1/joy_0.89.1_darwin_amd64.tar.gz"
-      sha256 "57d11a4e9c10b9f3a52c217501f7036c49a6f901b9cfbc3f7449b96f58f59bc4"
+      url "https://github.com/nestoca/joy/releases/download/v0.89.2/joy_0.89.2_darwin_amd64.tar.gz"
+      sha256 "a5db9721c75b39f54a310fb93eb76c9e079d89540e4a26fc88bee7efe2cc2d9b"
 
       define_method(:install) do
         bin.install "joy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nestoca/joy/releases/download/v0.89.1/joy_0.89.1_darwin_arm64.tar.gz"
-      sha256 "cfa2edcd1783ac04451b20294e11807ce97f9443a684ff0861c0f4a29d8517e5"
+      url "https://github.com/nestoca/joy/releases/download/v0.89.2/joy_0.89.2_darwin_arm64.tar.gz"
+      sha256 "33ef64b0c868e1f3885f42beceb968a0346adcb4023fe45679e58114eed2cfc1"
 
       define_method(:install) do
         bin.install "joy"
@@ -29,15 +29,15 @@ class Joy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/joy/releases/download/v0.89.1/joy_0.89.1_linux_amd64.tar.gz"
-      sha256 "2c737ef11d8b75ed8eb07defba1f7c895f46db090bbb758842ffe1860d2e6c02"
+      url "https://github.com/nestoca/joy/releases/download/v0.89.2/joy_0.89.2_linux_amd64.tar.gz"
+      sha256 "774b324865fc06b540513a14b44e98579b4535d6fc81e3b17b87c899d4528cda"
       define_method(:install) do
         bin.install "joy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nestoca/joy/releases/download/v0.89.1/joy_0.89.1_linux_arm64.tar.gz"
-      sha256 "4660b891afb90bd2d6837daa2bede2e39f47d9ff6d89bd689bc910ff08b1a38b"
+      url "https://github.com/nestoca/joy/releases/download/v0.89.2/joy_0.89.2_linux_arm64.tar.gz"
+      sha256 "636b6f73b46dafa9652bef4d3573af3906b3e1cc306497219417f47f6573090e"
       define_method(:install) do
         bin.install "joy"
       end
